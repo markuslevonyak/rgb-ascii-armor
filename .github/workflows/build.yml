@@ -17,7 +17,7 @@ jobs:
   default:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - run: cargo check --workspace
   features:
@@ -31,7 +31,7 @@ jobs:
           - strict,baid64
           - strict,base85
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - name: Feature ${{matrix.feature}}
         run: cargo check --workspace --no-default-features --features=${{matrix.feature}}
@@ -42,7 +42,7 @@ jobs:
       matrix:
         os: [ ubuntu-22.04, ubuntu-latest, macos-14, macos-latest, windows-2022, windows-latest ]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - name: Platform ${{matrix.os}}
         # mutually exclusive baid64/base85 features — cannot use --all-features
@@ -54,7 +54,7 @@ jobs:
       matrix:
         toolchain: [ nightly, beta, stable, 1.82.0 ]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: ${{matrix.toolchain}}
