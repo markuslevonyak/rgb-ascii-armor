@@ -23,7 +23,7 @@ amplify = "=4.8.1"
 rgb-strict-encoding = { version = "1.0.1", optional = true }
 baid64 = { version = "=0.4.1", optional = true }
 base85 = { version = "2.0.0", optional = true }
-sha2 = "0.10.8"
+sha2 = "0.11.0"
 
 [features]
 default = [
