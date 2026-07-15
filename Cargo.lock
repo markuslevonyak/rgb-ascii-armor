@@ -237,7 +237,7 @@ dependencies = [
 
 [[package]]
 name = "rgb-ascii-armor"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
  "amplify",
  "baid64",
